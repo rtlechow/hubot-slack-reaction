@@ -14,7 +14,7 @@ module.exports = (robot) ->
     payload = {}
     payload.name = data.name
     payload.timestamp = data.message.rawMessage.ts
-    payload.channel  = data.message.rawMessage.channel
+    payload.channel  = data.message.rawMessage.channel.id
     payload.token = process.env.HUBOT_SLACK_TOKEN
 
     reqbody = JSON.stringify(payload)
